@@ -1,0 +1,19 @@
+aside{
+    width: 30%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: rgba(0,0,0,.1);
+    border-radius: 6px;
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-right: 1px solid rgba(255,255,255,.5);
+}
+
+
+
+
+@media (max-width: 575.98px) {
+    aside{
+        display: none !important;
+      
+    }
+  }

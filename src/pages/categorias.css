@@ -1,0 +1,48 @@
+.main{
+    width: 70%;
+    max-width: 70%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 0px 16px;
+}
+
+.master{
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100% - 72px);
+    height: calc(100% - 72px);  
+   padding-top: 16px;
+   overflow: auto;
+  }
+.master_tiendas{
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100% - 170px);
+    height: calc(100% - 170px);  
+   padding-top: 16px;
+   overflow: auto;
+  }
+
+    
+  .contenido{
+    width: 100%;
+    max-width: 100%;
+   
+  
+    display: grid;
+    gap: 1rem;
+    /* grid-auto-rows: 22rem; */
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+  }
+    
+  .contenido_tiendas{
+    width: 100%;
+    max-width: 100%;
+   
+  
+    display: grid;
+    gap: 1rem;
+    /* grid-auto-rows: 22rem; */
+    grid-template-columns: repeat(auto-fill,minmax(14rem,1fr));
+  }
+
