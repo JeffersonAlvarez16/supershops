@@ -1,10 +1,22 @@
 
+  @media (max-width: 575.98px) {
+    .textos_principal{
+      padding: 6px;
+    }
+    .textos_principal h1{
+     font-size: 18px !important;
+  
+  }
+  .textos_principal p{
+    font-size: 1rem !important;
+    line-height: 1.2;
+    font-family: 'Bad Script', cursive;
+}
+  }
+
+
 
 .card_principal{
-    
-
-
-
   position: relative;
   overflow: hidden;
   z-index: 9999;
@@ -16,6 +28,7 @@
     align-items: center;
     width: 40%;
     z-index: 9999;
+    padding: 12px;
 }
 
 .textos_principal h1{
@@ -26,6 +39,7 @@
     display: flex;
     flex-direction: column;
     width: 60%;
+    padding: 12px;
     z-index: 9999;
     color: white;
 }
@@ -40,6 +54,7 @@
     align-items: center;
     margin-top:36px;
     margin-bottom: 48px;
+    padding: 0px 12px;
 }
 
 
@@ -47,7 +62,6 @@
     border-radius: 6px;
     width: 80% ;
     height: 200px;
-    padding: 12px;
     display: flex;
     
     position: relative;

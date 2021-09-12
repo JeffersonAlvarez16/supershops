@@ -22,10 +22,17 @@ const Header = ({ siteTitle }) => {
           className={container__header_open}
         >
           <div className={logo_open}>
+          <Link to="/" style={{
+       
+          textDecoration:"none",
+          color:"black"
+        }} className={categorias_link}>
+
             <div className={container_logo_open}>
               <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-shop-marketing-flatart-icons-lineal-color-flatarticons.png" />
 
             </div>
+        </Link>
             <img width="32" height="32" src="Grupo.png" onClick={() => setIsOpen(false)} />
           </div>
           <div className={title_bienvenida}>
