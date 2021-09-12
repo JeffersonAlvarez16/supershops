@@ -6,6 +6,9 @@
     padding: 0px 16px;
 }
 
+.master h2{
+  font-family: 'Kaushan Script', cursive;
+}
 .master{
     width: 100%;
     max-width: 100%;
@@ -22,6 +25,9 @@
    padding-top: 16px;
    overflow: auto;
   }
+.master_tiendas h2{
+  font-family: 'Kaushan Script', cursive;
+  }
 
     
   .contenido{
@@ -36,13 +42,21 @@
   }
     
   .contenido_tiendas{
-    width: 100%;
+    padding: 0px 6px;
     max-width: 100%;
    
   
     display: grid;
     gap: 1rem;
     /* grid-auto-rows: 22rem; */
-    grid-template-columns: repeat(auto-fill,minmax(14rem,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
   }
 
+  @media (max-width: 575.98px) {
+    .contenido_tiendas{
+      padding: 0px !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }

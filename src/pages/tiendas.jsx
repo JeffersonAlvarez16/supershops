@@ -29,6 +29,11 @@ const Tiendas = () => (
 
                 <main className="contenido_tiendas">
                 <CardTiendas />
+                <CardTiendas />
+                <CardTiendas />
+                <CardTiendas />
+                <CardTiendas />
+                <CardTiendas />
                   
                 </main>
 

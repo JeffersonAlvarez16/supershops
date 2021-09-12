@@ -1,15 +1,22 @@
 .card_categoria_tienda{
     border-radius: 6px;
-    color: white;
+    color: black;
     height: 22px;
     font-size: 14px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    background: rgba(0, 0, 0, 0.3);
+    background: #fefefe;
     padding: 3px 9px;
     transform-origin: top left;
     transform: skewY(3.601295deg) rotatez(-6.03624deg);
     transition-duration: .3s;
     cursor: pointer;
+    animation: spin 10s linear infinite;
+    border: 1px dashed #4BB543;
+    
+}
+.card_categoria_tienda:active{
+  animation: spin 2s linear infinite;
+  border: 1px dashed #4BB543;
     
 }
 
@@ -22,7 +29,7 @@
  
 
 .card_categoria_tienda h2{
-  
+  font-family: 'Kaushan Script', cursive;
     font-size: 16px;
    
 }
@@ -41,9 +48,11 @@
     margin: 0;
     padding: 0 1rem;
     color: white;
+    font-family: 'Kaushan Script', cursive;
   }
   .card .title {
     padding: 1rem;
+    font-family: 'Kaushan Script', cursive;
     text-align: right;
     color: green;
     font-weight: bold;
@@ -121,3 +130,9 @@
    
   }
   
+
+  @keyframes spin { 
+    100% { 
+      transform: rotateZ(360deg);
+    }
+  }

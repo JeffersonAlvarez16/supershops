@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Buscador from "../components/Buscador/Buscador"
 import "./categorias.css"
 import CardCategorias from "../components/CardCategoria/CardCategorias"
+import Aqui from "../components/Aqui"
 const Categorias = () => (
     <Layout>
         <Seo title="Categorias" />
@@ -17,12 +18,13 @@ const Categorias = () => (
                     <div style={{width:"100%"}}>
                         <h2 
                         style={{
-                            color: "white"
+                            color: "white",
+                            fontFamily:"font-family: 'Kaushan Script', cursive"
                         }}
                         >Categorias</h2>
                     </div>
                 <main className="contenido">
-                    <CardCategorias />
+                  
                     <CardCategorias />
                     <CardCategorias />
                     <CardCategorias />

@@ -1,0 +1,64 @@
+
+.card_aqui:hover{
+    
+}
+
+.card_aqui::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #00c0f6;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.card_aqui::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+    background-color: #00c0f6;
+    transform-origin: left;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    
+}
+.card_patrocinado{
+
+}
+.card_aqui{
+    transition: 0.5s;
+    height: 100px;
+    background-color: #fff;
+    transform:translateY(-10px)
+    
+}
+.contenedor_aqui{
+    width: 75%;
+    transform: skewY(0deg);
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.imgBoxAqui{
+    position: relative;
+    height: 100px;
+    
+    background-color: #0e0b19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgBoxAqui h3{
+    position: relative;
+    color: #fff;
+    text-align: center;
+}

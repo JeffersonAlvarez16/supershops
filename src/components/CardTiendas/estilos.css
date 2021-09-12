@@ -1,175 +1,133 @@
 
 
 
-/* center container in the middle */
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
+@media (max-width: 575.98px) {
+  .block{
+    width: 95% !important;
+  }
+}
 .container_tienda {
   position: relative;
   margin: auto;
   overflow: hidden;
- 
-  background: #F5F5F5;
-  box-shadow: 5px 5px 15px rgba(#BA7E7E, .5);
-  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.slideshow-buttons p {
-  font-size: 0.6em;
-  color: #BA7E7E;
-  letter-spacing: 1px;
+.redes_sociales_tienda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+.redes_sociales_tienda img{
+  width: 40px;
+
+  margin-bottom:8px ;
 }
 
-.product h1 {
-  font-size: 1.2em;
-  color: #4E4E4E;
-  margin-top: -5px;
+.block {
+  position: relative;
+  
+  width: 100%;
+  height: 250px;
+  border-radius: 1px;
+  background: linear-gradient(0deg, #000, #272727);
 }
 
-.product h2 {
-  color: #C3A1A0;
-  margin-top: -5px;
-}
-
-.images img {
-  width: 290px;
-  margin-top: 47px;
-}
-
-.slideshow-buttons {
-  top: 70%;
-  display: none;
-}
-
-.one, .two, .three, .four {
+.block:before, .block:after {
+  content: '';
   position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #E0C9CB;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(10deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
 }
 
-.one {
-  left: 22%;
-}
-.two {
-  left: 27%;
-}
-.three {
-  left: 32%;
-}
-.four {
-  left: 37%;
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
-.product {
-  position: absolute;
-  width: 40%;
+.block:after {
+  filter: blur(50px);
+}
+
+
+
+
+.container_tienda:hover .icono_navegar{
+  display: flex;
+}
+
+
+.imagen_container{
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
-  top: 10%;
-  left: 60%;
+  width: 100%;
 }
 
-.desc {
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: 17px;
-  color: #4E4E4E;
-  font-size: .7em;
-  line-height: 1.6em;
-  margin-right: 25px;
-  text-align: justify;
-}
-
-button:hover {
-    background: #BA7E7E;
-    transition: all .4s ease-in-out;
-  
-}
-button {
-  background: darken(#E0C9CB, 10%);
-  padding: 10px;
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  margin: -1px;
-  border-radius: 2px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #F5F5F5;
-  cursor: pointer;
-  
-}
-
-.add {
-  width: 67%;
-}
-
-.like {
-  width: 22%;
-}
-
-.sizes:hover {
-  cursor: pointer;
-}
-.sizes {
-  display: grid;
-  color: #D9AAB7;
-  grid-template-columns: repeat(auto-fill, 30px);
-  width: 60%;
-  grid-gap: 4px;
-  margin-left: 20px;
-  margin-top: 5px;
- 
-}
-
-.pick {
-  margin-top: 11px;
-  margin-bottom:0;
-  margin-left: 20px;
-}
-
-.size:hover{
-  background: #BA7E7E;
-  color: #F5F5F5;
-  transition: all .4s ease-in-out;
-}
-.size {
-  padding: 9px;
-  border: 1px solid #E0C9CB;
-  font-size: 0.7em;
-  text-align: center;
-  
-}
-
-.focus{
-  background: #BA7E7E;
-  color: #F5F5F5;
-}
-
-footer   p {
-    letter-spacing: 3px;
-  
-}
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-
-}
-footer :hover {
-  color: #7d7d7d;
-
-
-}
-footer {
+.redes_sociales_tienda{
   position: absolute;
-  bottom: 0;
+  width: 56px;
   right: 0;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  padding: 10px;
-  
-  
-    
-  
+  height: 100%;
+  background-color: #212F3C;
 }
+.redes_description_tienda{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  margin-right: 56px;
+  background-color: #212F3C;
+  font-family: 'Bad Script', cursive;
+
+}
+
+.redes_description_tienda p{
+  padding: 12px;
+  overflow: hidden;
+  color: white;
+  height: 24px;
+
+}
+
+.icono_navegar{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #D7DBDD;  /* fallback for old browsers */
+
+
+}
+

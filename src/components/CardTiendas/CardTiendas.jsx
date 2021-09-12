@@ -1,44 +1,36 @@
 import React from "react"
 import "./estilos.css"
 const CardTiendas = () => {
-    return <>
-    <div class="container_tienda">
-  <div class="images">
-    <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
-  </div>
-  <div class="slideshow-buttons">
-    <div class="one"></div>
-    <div class="two"></div>
-    <div class="three"></div>
-    <div class="four"></div>
-  </div>
-  <p class="pick">choose size</p>
-  <div class="sizes">
-    <div class="size">5</div>
-    <div class="size">6</div>
-    <div class="size">7</div>
-    <div class="size">8</div>
-    <div class="size">9</div>
-    <div class="size">10</div>
-    <div class="size">11</div>
-    <div class="size">12</div>
-  </div>
-  <div class="product">
-    <p>Women's Running Shoe</p>
-    <h1>Nike Epic React Flyknit</h1>
-    <h2>$150</h2>
-    <p class="desc">The Nike Epic React Flyknit foam cushioning is responsive yet light-weight, durable yet soft. This creates a sensation that not only enhances the feeling of moving forward, but makes running feel fun, too.</p>
-    <div class="buttons">
-      <button class="add">Add to Cart</button>
-      <button class="like"><span>♥</span></button>
-    </div>
-  </div>
-</div>
+  return <>
+  <div class="block">
+  <div class="container_tienda animate__animated animate__backInUp">
 
-<footer>
-  <p>made by <a href="https://codepen.io/juliepark"> julie</a> ♡</p>
-</footer>
-    </>
+      <div className="imagen_container" style={{
+        backgroundImage:"url('https://img.freepik.com/vector-gratis/logotipo-moda_23-2148558723.jpg?size=626&ext=jpg&ga=GA1.2.2107986711.1630540800')"
+      }}> 
+      <div className="redes_sociales_tienda">
+      <img src="https://img.icons8.com/cute-clipart/64/000000/web.png"/>
+      <img src="https://img.icons8.com/clouds/100/000000/facebook.png"/>
+      <img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/>
+      </div>
+     
+      <div className="redes_description_tienda">
+     
+       <p>
+       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+       </p>
+     
+      </div>
+      <div className="icono_navegar">
+      <img className="animate__animated animate__fadeInBottomLeft" src="https://img.icons8.com/material-sharp/96/000000/navigation.png"/>
+      </div>
+      </div>
+      
+  </div>
+ 
+  
+  </div>
+  </>
 }
 
 

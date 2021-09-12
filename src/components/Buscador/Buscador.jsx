@@ -9,6 +9,7 @@ const Buscador=({isTienda})=>{
             <h3 
                         style={{
                             color: "white",
+                            fontFamily:"font-family: 'Kaushan Script', cursive;",
                             marginTop:8
                         }}
                         >Categorias</h3>

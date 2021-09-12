@@ -47,7 +47,7 @@ const Header = ({ siteTitle }) => {
               </div>
             </Link>
 
-            <Link className={tiendas_link_open}>
+            <Link to="/tiendas" className={tiendas_link_open}>
 
               <img width="48" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-shop-marketing-flatart-icons-lineal-color-flatarticons.png" />
               <div className={h3}>
