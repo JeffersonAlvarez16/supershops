@@ -29,7 +29,7 @@
  
 
 .card_categoria_tienda h2{
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Montserrat', sans-serif;
     font-size: 16px;
    
 }
@@ -48,11 +48,11 @@
     margin: 0;
     padding: 0 1rem;
     color: white;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Montserrat', sans-serif;
   }
   .card .title {
     padding: 1rem;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-align: right;
     color: green;
     font-weight: bold;
@@ -91,7 +91,7 @@
   }
   
   .title-total {
-    padding: 2.5em 1.5em 1.5em 1.5em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
   }
   
   path {
@@ -107,7 +107,7 @@
     height: 100%;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    background-image: url("https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg");
+   
     background-position: center center;
     background-size: cover;
   }
@@ -116,20 +116,13 @@
     border: none;
     background: none;
     font-size: 24px;
-    color: #8bc34a;
+    color: #fff;
     cursor: pointer;
     transition:.5s;
    
   }
   
-  button:hover {
-
-        color: #4CAF50  ;
-        transform: rotate(22deg)
-      
-   
-  }
-  
+ 
 
   @keyframes spin { 
     100% { 

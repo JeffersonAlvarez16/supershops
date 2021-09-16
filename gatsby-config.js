@@ -5,6 +5,9 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  flags: {
+    DEV_SSR: false
+   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -15,8 +18,35 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        whitelist: ['slick-slider',
+                    'slick-initialized',
+                    'slick-list',
+                    'slick-track',
+                    'slick-slide',
+                    'slick-active',
+                    'slick-current']
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `ztu8v4x5`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.SANITY_TOKEN,
+
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        graphqlTag: "default",
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

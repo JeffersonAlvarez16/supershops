@@ -1,6 +1,6 @@
 
 .card_aqui:hover{
-    
+    transform:translateY(-20px)
 }
 
 .card_aqui::before{
@@ -36,12 +36,14 @@
     transition: 0.5s;
     height: 100px;
     background-color: #fff;
-    transform:translateY(-10px)
+    transform:translateY(-40px);
+    cursor: pointer;
+    
     
 }
 .contenedor_aqui{
     width: 75%;
-    transform: skewY(0deg);
+    transform: skewY(-6deg);
     flex-wrap: wrap;
     display: flex;
 }
@@ -61,4 +63,6 @@
     position: relative;
     color: #fff;
     text-align: center;
+    font-size: 1.1em;
+    padding: 0px 8px;
 }

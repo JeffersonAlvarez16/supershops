@@ -13,9 +13,14 @@ export default {
             title: "Descripcion",
         },
         {
-            name: "color",
-            type: "string",
-            title: "Color",
+            title: 'Colores',
+            name: 'colores',
+            type: 'array',
+            of: [{
+              
+                type: 'string',
+               
+            }]
         },
         {
             name: "logo",

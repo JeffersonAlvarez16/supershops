@@ -13,8 +13,8 @@ const Header = ({ siteTitle }) => {
 
 
   if (isOpen) {
-    return <div className={`animate__animated animate__backInLeft ${header_div_open}`}>
-      <header
+    return <div className="contenedor_fixed">
+    <header
         className={header_open}
       >
         <div
@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => {
 
               <img width="48" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-shop-marketing-flatart-icons-lineal-color-flatarticons.png" />
               <div className={h3}>
-                <h4 className="animate__animated animate__fadeInTopLeft">
+                <h4 className="">
                   Tiendas
                 </h4>
 
@@ -70,7 +70,7 @@ const Header = ({ siteTitle }) => {
               <img width="48" src="https://img.icons8.com/color-glass/96/000000/market-square.png" />
 
               <div className={h3}>
-                <h4 className="animate__animated animate__fadeInTopLeft">
+                <h4 className="">
                   ¿Qué es SuperShops
                   marketplace?
                 </h4>
@@ -105,11 +105,11 @@ const Header = ({ siteTitle }) => {
 
         </div>
       </header>
-    </div>
+      </div>
 
   } else {
     return <header
-      className={`animate__animated animate__pulse ${header}`}
+      className={`${header}`}
     >
       <div
         className={container__header}
@@ -142,7 +142,7 @@ const Header = ({ siteTitle }) => {
 
             <img width="48" src="https://img.icons8.com/color/48/000000/categorize.png" />
             <div className={h3}>
-              <h3 className="animate__animated animate__fadeInTopLeft">
+              <h3 className="">
                 Categorias
               </h3>
 
@@ -154,7 +154,7 @@ const Header = ({ siteTitle }) => {
 
             <img width="48" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-shop-marketing-flatart-icons-lineal-color-flatarticons.png" />
             <div className={h3}>
-              <h3 className="animate__animated animate__fadeInTopLeft">
+              <h3 className="">
                 Tiendas
               </h3>
 
@@ -165,7 +165,7 @@ const Header = ({ siteTitle }) => {
 
             <img width="48" src="https://img.icons8.com/color-glass/96/000000/market-square.png" />
             <div className={h3}>
-              <h3 className="animate__animated animate__fadeInTopLeft">
+              <h3 className="">
                 ¿Qué es SuperShops
                 marketplace?
               </h3>

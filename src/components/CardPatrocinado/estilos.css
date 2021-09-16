@@ -29,20 +29,26 @@
     transition: 0.5s;
     border-bottom: 200px solid #d9d9d9;
 }
-.card_patrocinado{
 
-}
 .card_patrocinado{
     transition: 0.5s;
     height: 400px;
+    width: 100%;
     background-color: #fff;
+    cursor: pointer;
+    width: 350px;
+    
+   
     
 }
 .contenedor_patrocinado{
-    width: 75%;
+    position: relative;
+    width: 350px;
     transform: skewY(-8deg);
     flex-wrap: wrap;
     display: flex;
+    margin-right: 75px;
+    margin-top: -24px;
 }
 
 .imgBox{

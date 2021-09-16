@@ -22,10 +22,9 @@ export default {
             name: 'categorias',
             type: 'array',
             of: [{
-                title: 'relacion',
-                name: 'relacion',
-                type: 'reference',
-                to: [{ type: 'categorias' }]
+              
+                type: 'categorias',
+               
             }]
         },
     ],

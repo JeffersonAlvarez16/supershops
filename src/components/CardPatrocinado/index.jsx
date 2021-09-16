@@ -1,16 +1,16 @@
 import React from "react";
 import "./estilos.css"
-const CardPatrocinado=()=>{
+const CardPatrocinado=({data})=>{
     return <div className="contenedor_patrocinado">
 
     <div className="card_patrocinado">
         <div className="imgBox">
         <img src="https://img.icons8.com/dusk/64/000000/duty-free.png"/>
-        <h3>Patrocinador</h3>
+        <h3>{data.title} </h3>
         </div>
         <div className="conten_patrocinado">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam accusamus dolore nisi aspernatur nam tempora maiores unde, adipisci, ipsa cupiditate ullam corrupti est odio architecto quidem earum ut et. Laudantium?
+              {data.descrption}
             </p>
         </div>
     </div>

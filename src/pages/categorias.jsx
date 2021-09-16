@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -8,11 +8,13 @@ import Buscador from "../components/Buscador/Buscador"
 import "./categorias.css"
 import CardCategorias from "../components/CardCategoria/CardCategorias"
 import Aqui from "../components/Aqui"
-const Categorias = () => (
-    <Layout>
+const Categorias = ({data}) => {
+   
+    let datos=data.allSanityCategorias.nodes;
+   return <Layout>
         <Seo title="Categorias" />
         <div className="main">
-            <Buscador />
+            <Buscador data={datos} />
             <div className="master">
 
                     <div style={{width:"100%"}}>
@@ -24,22 +26,13 @@ const Categorias = () => (
                         >Categorias</h2>
                     </div>
                 <main className="contenido">
+                {
+                    datos.map(item=>{
+
+                        return <CardCategorias data={item} />
+                    })
+                }
                   
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
                 </main>
 
                 {/* <footer
@@ -54,6 +47,30 @@ const Categorias = () => (
             </div>
         </div>
     </Layout>
-)
+}
 
 export default Categorias
+
+
+
+export const query = graphql`
+query Categorias {
+    allSanityCategorias {
+      nodes {
+        categorias {
+          titulo
+          id
+        }
+        id
+        titulo
+        icono {
+          asset {
+            url
+          }
+        }
+      }
+    }
+  }
+  
+  
+`

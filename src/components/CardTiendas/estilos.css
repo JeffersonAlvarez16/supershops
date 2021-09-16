@@ -14,9 +14,9 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  width: 100%;
-  height: 250px;
-  
+  width: 98%;
+  height: 248px;
+  padding-top: 6px;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -38,7 +38,7 @@
   
   width: 100%;
   height: 250px;
-  border-radius: 1px;
+  border-radius: 6px;
   background: linear-gradient(0deg, #000, #272727);
 }
 
@@ -46,12 +46,11 @@
   content: '';
   position: absolute;
   left: -2px;
+  border-radius: 6px;
   top: -2px;
-  background: linear-gradient(10deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-    #0000ff, #00ff00,#ffff00, #ff0000);
   background-size: 100%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
   z-index: -1;
   animation: steam 20s linear infinite;
 }
@@ -61,7 +60,7 @@
     background-position: 0 0;
   }
   50% {
-    background-position: 100% 0;
+    background-position: 10% 0;
   }
   100% {
     background-position: 0 0;
@@ -94,27 +93,27 @@
   width: 56px;
   right: 0;
   height: 100%;
-  background-color: #212F3C;
+ 
 }
 .redes_description_tienda{
   position: absolute;
   width: 100%;
   display: flex;
   overflow: hidden;
+  color: #000;
   bottom: 0;
   left: 0;
   right: 0;
   height: 56px;
   margin-right: 56px;
-  background-color: #212F3C;
-  font-family: 'Bad Script', cursive;
+ 
 
 }
 
 .redes_description_tienda p{
   padding: 12px;
   overflow: hidden;
-  color: white;
+  color: #000;
   height: 24px;
 
 }
@@ -126,7 +125,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  background: #D7DBDD;  /* fallback for old browsers */
+  background: #fff;  /* fallback for old browsers */
 
 
 }

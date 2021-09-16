@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -8,11 +8,14 @@ import CardCategorias from "../components/CardCategoria/CardCategorias"
 import Buscador from "../components/Buscador/Buscador"
 import CardPrincipal from "../components/CardPrincipal"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({data}) => {
+    console.log(data)
+    let datos=data.allSanityCategorias.nodes;
+    datos.slice(6)
+ return <Layout>
     <Seo title="Home" />
     <div className="main">
-            <Buscador />
+            <Buscador isTienda={false} />
             <div className="master">
 
                       <CardPrincipal />
@@ -26,11 +29,14 @@ const IndexPage = () => (
                     </div>
                 <main className="contenido">
 
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
-                    <CardCategorias />
+                   {
+                       datos.map(item=>{
+                        return <CardCategorias data={item} />
+                       })
+                   }
+                    <div className="mas_categorias">
+                       <h2> Mas categorias</h2>
+                    </div>
                   
                 </main>
 
@@ -46,6 +52,30 @@ const IndexPage = () => (
             </div>
         </div>
   </Layout>
-)
+}
 
 export default IndexPage
+
+
+
+export const query = graphql`
+query CategoriasIndex {
+    allSanityCategorias {
+      nodes {
+        categorias {
+          titulo
+          id
+        }
+        id
+        titulo
+        icono {
+          asset {
+            url
+          }
+        }
+      }
+    }
+  }
+  
+  
+`

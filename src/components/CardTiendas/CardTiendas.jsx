@@ -1,20 +1,32 @@
 import React from "react"
 import "./estilos.css"
-const CardTiendas = () => {
+const CardTiendas = ({data}) => {
   return <>
-  <div class="block">
-  <div class="container_tienda animate__animated animate__backInUp">
+  <div className="block"  style={{
+     backgroundSize: "100%",
+     width: "calc(100% + 6px)",
+     height: "calc(100% + 6px)",
+     zIndex: -1,
+     animation: "steam 20s linear infinite",
+    background: `linear-gradient(-10deg, ${data.colores[0]}, ${data.colores[1]},${data.colores[2]})`
+  }}>
+  <div className="container_tienda animate__animated animate__backInUp">
 
       <div className="imagen_container" style={{
-        backgroundImage:"url('https://img.freepik.com/vector-gratis/logotipo-moda_23-2148558723.jpg?size=626&ext=jpg&ga=GA1.2.2107986711.1630540800')"
+        backgroundImage:`url('${data.logo.asset.url}')`,
+        backgroundPosition:"initial",
+        backgroundSize:"cover",
+        backgroundRepeat:"no-repeat"
       }}> 
       <div className="redes_sociales_tienda">
-      <img src="https://img.icons8.com/cute-clipart/64/000000/web.png"/>
-      <img src="https://img.icons8.com/clouds/100/000000/facebook.png"/>
-      <img src="https://img.icons8.com/clouds/100/000000/instagram-new--v2.png"/>
+      <img src="https://img.icons8.com/color/48/000000/internet--v1.png"/>
+      <img src="https://img.icons8.com/color/48/000000/facebook.png"/>
+      <img src="https://img.icons8.com/color/48/000000/instagram-new.png"/>
       </div>
      
-      <div className="redes_description_tienda">
+      <div className="redes_description_tienda" style={{
+        background: `linear-gradient(-10deg, ${data.colores[0]}, ${data.colores[1]},${data.colores[2]})`
+      }}>
      
        <p>
        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

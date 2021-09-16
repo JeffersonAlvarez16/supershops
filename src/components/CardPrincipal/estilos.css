@@ -10,7 +10,23 @@
   .textos_principal p{
     font-size: 1rem !important;
     line-height: 1.2;
-    font-family: 'Bad Script', cursive;
+}
+
+.box{
+  width: 75% !important;
+  margin-bottom: 24px;
+}
+
+.imagen_principal{
+  display: none !important;
+}
+
+.textos_principal{
+  width:  100% !important;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
   }
 
@@ -32,7 +48,8 @@
 }
 
 .textos_principal h1{
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 6px;
 
 }
 .textos_principal{
@@ -45,7 +62,6 @@
 }
 .textos_principal p{
     font-size: 1.5rem;
-    font-family: 'Bad Script', cursive;
 }
 
 .container_principal_card{
@@ -55,6 +71,7 @@
     margin-top:36px;
     margin-bottom: 48px;
     padding: 0px 12px;
+    
 }
 
 
@@ -63,20 +80,21 @@
     width: 80% ;
     height: 200px;
     display: flex;
-    
     position: relative;
-    box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+    background-color: #0e0b19;
+    
   }
   .box:after, .box:before{
     mix-blend-mode:multiply;
     filter:none;
-    z-index: -1;
     content:'';
+    z-index: 1;
     width:calc(100% + (50px * 2));
     height:calc(100% + (50px * 2));
     position: absolute;
+    background: #fff;
     display: block;
-    animation: border 10s ease-in-out infinite;
+    animation: border 20s ease-in-out infinite;
     transform:translateX(-50px) translateY(-50px);
   }
   @keyframes border {
@@ -91,12 +109,14 @@
   }
   
   .box:after{
-    animation-delay: -5s;
+    animation-delay: 5s;
+    border-radius: 6px;
     background-color: #93e1d8;
     clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
   }
   .box:before {
-    background-color: #AA4465;
+    background-color: #00c0f6;
+    border-radius: 6px;
       clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
   }
   
@@ -105,7 +125,7 @@
   }
   .box:hover:before, .box:hover:after {
   
-            animation-duration: 2s;
+            animation-duration: 10s;
   }
 
 

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -9,11 +9,13 @@ import "./categorias.css"
 import CardCategorias from "../components/CardCategoria/CardCategorias"
 import CardCategoriasTiendas from "../components/CardCategoria/CategoriasTiendas"
 import CardTiendas from "../components/CardTiendas/CardTiendas"
-const Tiendas = () => (
-    <Layout>
+const Tiendas = ({data}) => {
+    let datosTiendas=data.allSanityTiendas.nodes;
+    let datosCategorias=data.allSanityCategorias.nodes;
+    return <Layout>
         <Seo title="Tiendas" />
         <div className="main">
-            <Buscador isTienda={true} />
+            <Buscador isTienda={true} data={datosCategorias} />
             
             <div className="master_tiendas">
 
@@ -28,12 +30,13 @@ const Tiendas = () => (
                     </div>
 
                 <main className="contenido_tiendas">
-                <CardTiendas />
-                <CardTiendas />
-                <CardTiendas />
-                <CardTiendas />
-                <CardTiendas />
-                <CardTiendas />
+                  {
+                    datosTiendas.map(item=>{
+
+                      return <CardTiendas data={item} />
+                    })
+                  }
+               
                   
                 </main>
 
@@ -49,6 +52,50 @@ const Tiendas = () => (
             </div>
         </div>
     </Layout>
-)
+}
 
 export default Tiendas
+
+
+
+export const query = graphql`
+{
+  allSanityTiendas {
+    nodes {
+      colores
+      descripcion
+      id
+      nombre
+      palabra_clave
+      categoria {
+        id
+        titulo
+      }
+      logo {
+        asset {
+          url
+        }
+      }
+    }
+  }
+
+    allSanityCategorias {
+      nodes {
+        categorias {
+          titulo
+          id
+        }
+        id
+        titulo
+        icono {
+          asset {
+            url
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+`

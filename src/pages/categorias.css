@@ -7,7 +7,7 @@
 }
 
 .master h2{
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 .master{
     width: 100%;
@@ -26,7 +26,7 @@
    overflow: auto;
   }
 .master_tiendas h2{
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Montserrat', sans-serif;
   }
 
     
@@ -34,7 +34,7 @@
     width: 100%;
     max-width: 100%;
    
-  
+    cursor: pointer;
     display: grid;
     gap: 1rem;
     /* grid-auto-rows: 22rem; */
@@ -43,6 +43,7 @@
     
   .contenido_tiendas{
     padding: 0px 6px;
+    cursor: pointer;
     max-width: 100%;
    
   
@@ -52,6 +53,21 @@
     grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
   }
 
+  .mas_categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    height: 76px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+  }
+.mas_categorias h2{
+  margin-bottom: 0px;
+  font-size: 18px;
+}
   @media (max-width: 575.98px) {
     .contenido_tiendas{
       padding: 0px !important;
