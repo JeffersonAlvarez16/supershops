@@ -31,9 +31,11 @@ html {
 }
 
 .principal{
-  width: 100%;
+  width: calc(100vw - 48px);
+  height: calc(100vh - 48px);
   display: flex;
-  
+  justify-content: center;
+  align-items: center; 
   padding: 24px;
 }
 
@@ -50,7 +52,7 @@ html {
   display: flex;
   justify-content: center;
   max-height: 100vh;
-    height: 100vh;
+  height: 100vh;
 }
 
 #gatsby-focus-wrapper{

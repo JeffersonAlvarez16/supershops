@@ -21,7 +21,7 @@ const Categorias = ({data}) => {
                         <h2 
                         style={{
                             color: "white",
-                            fontFamily:"font-family: 'Kaushan Script', cursive"
+                          
                         }}
                         >Categorias</h2>
                     </div>

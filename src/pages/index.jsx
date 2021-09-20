@@ -11,7 +11,7 @@ import CardPrincipal from "../components/CardPrincipal"
 const IndexPage = ({data}) => {
     console.log(data)
     let datos=data.allSanityCategorias.nodes;
-    datos.slice(6)
+   //  datos.slice(6)
  return <Layout>
     <Seo title="Home" />
     <div className="main">
@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
                         <h2 
                         style={{
                             color: "white",
-                            fontFamily:"font-family: 'Kaushan Script', cursive"
+                          
                         }}
                         >Categorias</h2>
                     </div>
